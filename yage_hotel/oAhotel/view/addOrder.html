@@ -1,0 +1,35 @@
+<form class="form-inline register">
+  <div class="form-group">
+    <label for="exampleInputName2">姓名:</label>
+    <input type="text" class="form-control orname"   name="orname">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail2">身份证:</label>
+    <input type="text" class="form-control oridentity"  name="oridentity">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail2">联系电话:</label>
+    <input type="text" class="form-control orcontact"   name="orcontact">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail2">预订入住时间:</label>
+    <input type="date" class="form-control ortimein"  name="ortimein">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail2">预订退房时间:</label>
+    <input type="date" class="form-control ordays"  name="ordays">
+  </div>
+    <div class="form-group">
+    <label for="exampleInputEmail2">预订房间样式:</label>
+    <!--<input type="text" class="form-control orstyle"  name="orstyle">-->
+    <select class="form-control orstyle" style="width: 184px;">
+		  <option>单人房</option>
+		  <option>双人房</option>
+		  <option>标准房</option>
+		  <option>豪华房</option>
+		  <option>总统套房</option>
+		  <option>情趣套房</option>
+	</select>
+  </div>
+  <button type="submit" class="btn btn-default" ng-click='addOrder()' ui-sref='searchOrder'>提交</button>
+</form>

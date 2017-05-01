@@ -1,0 +1,72 @@
+@charset "UTF-8";
+/*CSS初始化 B*/
+html, body {
+  width: 100%;
+}
+
+html, body, ul, li, p, h1, h2, h3, h4, img, input, a, form, dl, dt, dd {
+  margin: 0;
+  padding: 0;
+  /*清楚所选标签的默认padding margin*/
+}
+
+img {
+  border: 0;
+  /*清除图片边框*/
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  /*清除li之前的小点*/
+}
+
+.banxin {
+  width: 80%;
+  margin: 0 auto;
+}
+
+body {
+  background-color: #fff;
+  /*Body设置颜色，字体大小样式背景颜色*/
+  font-family: "微软雅黑","宋体",verdana,"Helvetica Neue",Helvetica,sans-serif;
+  font-size: 12px;
+}
+
+i {
+  font-style: normal;
+}
+
+.clearfix:after {
+  content: "";
+  height: 0;
+  line-height: 0;
+  display: block;
+  visibility: hidden;
+  clear: both;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+a {
+  color: #434343;
+  font: 12px "微软雅黑";
+  text-decoration: none;
+}
+
+
+a:hover {
+  color: #414141;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+/*CSS初始化结束*/

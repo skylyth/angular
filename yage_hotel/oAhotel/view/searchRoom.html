@@ -1,0 +1,54 @@
+  <div class="search-ele">
+      <input type="text" placeholder="输入关键词搜索" ng-model='roomKey' class="searchKey">
+      <button class="btn btn-default" type="button" disabled>搜索为全局搜索</button>
+</div>
+  <table class="table" id="searchAccount">
+<!-- On cells (`td` or `th`) -->
+			<tr>
+			  <th class="active">序号</th>
+			  <th class="success">房间号</th>
+			  <th class="danger">房间标准</th>
+			  <th class="info">房间数</th>
+			   <th class="active">房间价格</th>
+			   <th class="info">房间介绍</th>
+			   <th class="active">房间图片</th>
+			  <th class="warning">操作</th>
+			</tr>
+			<tr ng-repeat='v in roomList'>
+				<td class="active">{{$index + 1}}</td>
+			  <td class="success">{{v.roomNum}}</td>
+			  <td class="danger">{{v.roomStyle}}</td>
+			  <td class="info">{{v.roomRest}}</th>
+			  	<td class="active">{{v.roomPrice}}</td>
+			  <td class="info">{{v.roomNews}}</td>
+			  <td class="active"><img data-ng-src="../images/{{v.roomImg}}" alt='照片'/></td>
+			  <td class="warning"><a href="javascript:;" ng-click='delroom(v.id,v)'>删除</a><a href="javascript:;" ng-click='changeRoom(v.id)'>修改</a></td>
+			</tr>
+  </table>
+  
+  <div class="roomChange">
+  <h2>修改操作</h2>
+  <table class="table" id="searchAccount">
+<!-- On cells (`td` or `th`) -->
+			<tr>
+			  <th class="active">ID号</th>
+			  <th class="success">房间号</th>
+			  <th class="danger">房间标准</th>
+			  <th class="info">房间数</th>
+			   <th class="active">房间价格</th>
+			   <th class="info">房间介绍</th>
+			   <th class="active">房间图片</th>
+			  <th class="warning">操作</th>
+			</tr>
+			<tr >
+				<td class="active">{{modify}}</td>
+			  <td class="success"><input type="text" ng-model='cRoom'/></td>
+			  <td class="danger"><input type="text" ng-model='cStyle'/></td>
+			  <td class="info"><input type="text" ng-model='cRest'/></th>
+			  	<td class="active"><input type="text" ng-model='cPrice'/></td>
+			  <td class="info"><input type="text" ng-model='cNews'/></td>
+			  <td class="active"><input type="text" ng-model='cImg'/></td>
+			  <td class="warning"><a href="javascript:;" ng-click='roomBtn()'>确认修改</a><a href="javascript:;" ng-click='dropUpdate()'>放弃修改</a></td>
+			</tr>
+  </table>
+  </div>

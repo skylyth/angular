@@ -1,0 +1,98 @@
+<h3>客户入住信息</h3>
+<div class="search-ele">
+      <input type="text" placeholder="输入关键词搜索" ng-model='liveInKey' class="searchKey">
+      <button class="btn btn-default" type="button"  disabled>搜索为全局搜索</button>
+</div>
+<div class="tHeight">
+  <table class="table " id="searchAccount">
+<!-- On cells (`td` or `th`) -->
+			<tr>
+			  <th class="active">序号</th>
+			  <th class="success">姓名</th>
+			  <th class="danger">身份证号</th>
+			  <th class="info">联系电话</th>
+			   <th class="active">退房时间</th>
+			    <th class="active">房间号</th>
+			     <!--<th class="active">照片</th>-->
+			  <th class="warning">操作</th>
+			</tr>
+			<tr ng-repeat='v in liveInList1'>
+			  <td class="active">{{$index + 1}}</td>
+			  <td class="success">{{v.name}}</td>
+			  <td class="danger">{{v.identity}}</th>
+			  <td class="info">{{v.contact}}</td>
+			  <td class="danger">{{v.outTime}}</th>
+			  <td class="info">{{v.roomnumber}}</td>
+			  <!--<td class="active"><img data-ng-src="../images/{{v.img}}" alt='照片'/></td>-->
+			  <td class="warning"><a href="javascript:;" ng-click='chkOut(v.id)'>退房</a>
+			  	<a href="javascript:;" ng-click='updateLivein(v.id,$index)'>修改入住信息</a>
+			  	<a href="javascript:;" ng-click='importOpen($index)'>导入客户信息</a>
+			  </td>
+			</tr>
+  </table>	
+  	<h5>共有<span style="color: red;font: bold 18px '微软雅黑';">{{liveInAll}}</span>名客户入住</h5>
+</div>
+ <nav aria-label="Page navigation">
+		  <ul class="pagination opage">
+		    <li>
+		      <a href="javascript:;" aria-label="Previous" ng-click='liveInBack()'>
+		        <span aria-hidden="true">上一页</span>
+		      </a>
+		      <a href="javascript:;" aria-label="Next" ng-click='liveInGo()'>
+		        <span aria-hidden="true">下一页</span>
+		      </a>
+		    </li>
+		  </ul>
+		</nav>
+		
+		<!--修改入住信息11弹出框-->
+<form class="form-inline register" id="updateLive">
+  <div class="form-group">
+    <label for="exampleInputName2">姓名:</label>
+    <input type="text" class="form-control"   ng-model='liveName' >
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail2">身份证号:</label>
+    <input type="text" class="form-control" ng-model='liveIdentity' >
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail2">联系电话:</label>
+    <input type="text" class="form-control"   ng-model='liveContact' >
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail2">退房时间:</label>
+    <input type="date" class="form-control outTime" >
+  </div>
+   <div class="form-group">
+    <label for="exampleInputEmail2">房间号:</label>
+    <input type="text" class="form-control"  ng-model='liveNum'>
+  </div>
+  <button type="submit" class="btn btn-default" ng-click='liveOk()'>确定</button>
+   <button type="submit" class="btn btn-default" ng-click='liveNo()'>取消</button>
+</form>
+
+		<!--导入客户信息弹出 框！！-->
+<form class="form-inline register" id="importNews">
+  <div class="form-group">
+    <label for="exampleInputName2">姓名:</label>
+    <input type="text" class="form-control"   ng-model='importName' >
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail2">身份证号:</label>
+    <input type="text" class="form-control" ng-model='importIdentity' >
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail2">电话号码:</label>
+    <input type="text" class="form-control"  ng-model='importContact' >
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail2">性别:</label>
+    <select class="form-control importstyle" style="width: 184px;">
+		  <option selected>男</option>
+		  <option>女</option>
+	</select>
+  </div>
+
+  <button type="submit" class="btn btn-default" ng-click='importTo()'>添加到客户信息</button>
+   <button type="submit" class="btn btn-default" ng-click='importNo()'>取消添加</button>
+</form>

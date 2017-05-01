@@ -1,0 +1,28 @@
+<div class="sysDo" style="width: 360px;height: 400px;margin-left: 200px;">
+	<p>商城设置是为了维护网站使用，请仔细设置！</p>
+	<form>
+  <div class="form-group" style="margin: 0;">
+    <label>设置时间</label>
+    <input type="text" class="form-control" ng-model='startTime' placeholder="yyyy-mm-dd">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">结束时间</label>
+    <input type="text" class="form-control" ng-model='endTime'placeholder="yyyy-mm-dd">
+  </div>
+  <div class="form-group">
+    <label>商城关闭原因</label>
+    <input type="text" class="form-control" ng-model='reason'>
+  </div>
+  <div class="form-group">
+    <label>上传图片</label>
+    <input type="file" id="sysImg">
+  </div>
+  <div class="checkbox">
+    <label>
+      <span>是否关闭商城</span><input type="checkbox" ng-model='chkBtn'> 
+    </label>
+  </div>
+  <button type="submit" class="btn btn-default" ng-click='go()'>提交</button>
+   <button type="reset" class="btn btn-default">重置</button>
+</form>
+</div>

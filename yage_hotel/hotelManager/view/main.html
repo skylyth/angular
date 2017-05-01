@@ -1,0 +1,76 @@
+	<div class="bigShow">
+	<header class='header'>
+		<div class="title banxin">
+			<h1>欢迎来到雅阁旅馆</h1>
+		</div>
+	</header>
+	<nav class='nav '>
+	<div class="navto banxin">
+		<ul>
+			<li><a href="javascript:;" >网站首页</a></li>
+			<li><a href="javascript:;" >单人房</a></li>
+			<li><a href="javascript:;">双人房</a></li>
+			<li><a href="javascript:;">标准房</a></li>
+			<li><a href="javascript:;">商务房</a></li>
+			<li><a href="javascript:;">在线注册</a></li>
+			<li><a href="javascript:;">我的信息</a></li>
+			<li><a href="javascript:;">留言板</a></li>
+		</ul>
+		<div class="search ng-cloak">
+		<div class="search-l">
+			<h3>筛选-搜索:</h3>
+			<form action="javascript:;" >
+				价格区间：<input type="text">--<input type="text"><button>搜索</button>	
+			</form>
+		</div>
+		<div class="nowDate" >{{now | date:'yyyy年MM月dd日 HH时mm分ss秒'}}</div>
+		</div>
+	</div>
+	</nav>
+	<div clear='both'></div>
+	<section class='sec banxin'>
+		<div class="sec-left" ui-view>
+		</div>
+		<div class="page-login" id="page-login">
+			<p>用户注册<a href="javascript:;" style="float:right" id="close">&times;</a></p>
+			<form action="http://localhost/hotelManager/php/user-regist.php" name="reg" method="POST">
+			<div>真实姓名：<input type="text" name="relname"></div>
+			<div>设置密码：<input type="password" name="passwd"></div>
+			<div>身份证号：<input type="text" name="relid"></div>
+			<div>住址：<input type="text" name="reladdres"></div>
+			<div>性别：<input type="radio" name="sex">男<input type="radio"name="sex"></div>
+			<div>联系方式<input type="number" name="phone"></div>
+			<div>上传头像：<input type="file" name="file"></div>
+			<input type="submit" value="注册" style="width:60px;height:35px">
+		</form>
+		</div>
+		<aside class='aside'>
+			<div class="login">
+			<h5 style="color:red">用户登录</h5>
+				<div class="login-login">
+				
+					<label for="">用户名：<input type="text"></label>
+					<label for="">密码：<input type="password"></label>
+					<label for=""><button id="login">登录</button><button id="regist">注册</button></label>
+				</div>
+				<div class="do-login">欢迎登录&nbsp;&nbsp;&nbsp;<span>xxxx</span>&nbsp;&nbsp;<a href="javascript:;" style="color:red">退出</a></div>
+			</div>
+			<div class="pubNews">
+				<h3>网站公告</h3>
+				<p><a href="javascript:;">欢迎预定本旅馆客房，预定送好礼</a></p>
+				<p><a href="javascript:;">欢迎预定本旅馆客房，预定送好礼</a></p>
+			</div>
+			<div class="times">
+				<h3>网站日历</h3>
+				<div id="btn">
+				        <p id="minus">&lt;</p><b id="show"></b><p id="plus">&gt;</p>
+				    </div>
+				    <div id="header" class="clearfix">
+				        <span>日</span><span>一</span><span>二</span><span>三</span><span>四</span><span>五</span><span>六</span>
+				    </div>
+				    <div id="content" class="clearfix">
+			</div>
+		</aside>
+	</section>
+	<footer></footer>
+	</div>

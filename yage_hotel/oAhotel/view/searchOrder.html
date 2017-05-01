@@ -1,0 +1,103 @@
+<h3>查看订单信息</h3>
+<div class="search-ele">
+      <input type="text" placeholder="输入关键词搜索" ng-model='orderKey' class="searchKey">
+      <button class="btn btn-default" type="button"  disabled>搜索为全局搜索</button>
+</div>
+<div class="tHeight">
+
+  <table class="table " id="searchAccount">
+<!-- On cells (`td` or `th`) -->
+			<tr>
+			  <th class="active">序号</th>
+			  <th class="success">姓名</th>
+			  <th class="danger">身份证号</th>
+			  <th class="info">联系电话</th>
+			   <th class="active">预订入住时间</th>
+			    <th class="active">预订退房时间</th>
+			     <th class="active">房间样式</th>
+			  <th class="warning">操作</th>
+			</tr>
+			<tr ng-repeat='v in orderList1'>
+			<td class="active">{{$index + 1}}</td>
+			  <td class="active">{{v.name}}</td>
+			  <td class="success">{{v.identity}}</td>
+			  <td class="danger">{{v.contact}}</th>
+			  <td class="info">{{v.inTime}}</td>
+			  <td class="danger">{{v.inDays}}</th>
+			  <td class="info">{{v.roomStyle}}</td>		  
+			  <td class="warning">
+			  	<a href="javascript:;" ng-click='deleteOrder(v.id)'>删除</a>
+			  	<a href="javascript:;" ng-click='updateOrder(v.id,$index)'>修改</a>
+			  	<a href="javascript:;" ng-click='chkin(v.id,$index)'>即时入住</a>
+			  </td>
+			</tr>
+  </table>	
+  	<h5>共有<span style="color: red;font: bold 18px '微软雅黑';">{{allOrder}}</span>个订单</h5>
+</div>
+ <nav aria-label="Page navigation">
+		  <ul class="pagination opage">
+		    <li>
+		      <a href="javascript:;" aria-label="Previous" ng-click='orderBack()'>
+		        <span aria-hidden="true">上一页</span>
+		      </a>
+		      <a href="javascript:;" aria-label="Next" ng-click='orderGo()'>
+		        <span aria-hidden="true">下一页</span>
+		      </a>
+		    </li>
+		  </ul>
+		</nav>
+		<!--修改时弹出对话框-->
+<form class="form-inline register" id="updateOrder">
+  <div class="form-group">
+    <label for="exampleInputName2">姓名:</label>
+    <input type="text" class="form-control" ng-model='orname'>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail2">身份证号:</label>
+    <input type="text" class="form-control" ng-model='oridentity'>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail2">联系电话:</label>
+    <input type="text" class="form-control"   ng-model='orcontact'>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail2">预订入住时间:</label>
+    <input type="date" class="form-control orinTime"  ng-model='orinTime'>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail2">预订退房时间:</label>
+    <input type="date" class="form-control orDays"  ng-model='orDays'>
+  </div>
+    <div class="form-group">
+    <label for="exampleInputEmail2">房间样式:</label>
+    <input type="text" class="form-control"  ng-model='orStyle'>
+  </div>
+  <button type="submit" class="btn btn-default" ng-click="orderOk()">确定</button>
+   <button type="submit" class="btn btn-default" ng-click="orderNo()">取消</button>
+</form>
+
+<!--将订单信息写入入住信息中，及这个订单生效 客户已经入住-->
+<form class="form-inline register" id="writeliveOrder">
+  <div class="form-group">
+    <label for="exampleInputName2">姓名:</label>
+    <input type="text" class="form-control toliveinname" ng-model='toliveinname'  name="liveinname" autocomplete="off" disabled>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail2">身份证号:</label>
+    <input type="text" class="form-control toliveidentity" ng-model='toliveidentity' autocomplete="off" disabled>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail2">联系电话:</label>
+    <input type="text" class="form-control tolivecontact" ng-model='tolivecontact'   name="livecontact" autocomplete="off" disabled>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail2">退房时间:</label>
+    <input type="date" class="form-control tooutTime"  name="outTime" autocomplete="off">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail2">房间号:</label>
+    <input type="text" class="form-control toliveroomnum"  name="liveroomnum" autocomplete="off">
+  </div>
+  <button type="submit" class="btn btn-default" ng-click='orderTolive()' ui-sref='searchLivein'>提交</button>
+   <button type="submit" class="btn btn-default" ng-click='orderClosed()'>取消</button>
+</form>

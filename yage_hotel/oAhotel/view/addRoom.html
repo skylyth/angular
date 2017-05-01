@@ -1,0 +1,28 @@
+<form class="form-inline register" ng-controller='ctrl'ng-app='sjw'>
+  <div class="form-group">
+    <label for="exampleInputName2">房间号:</label>
+    <input type="text" class="form-control roomNum"   name="roomNume">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail2">房间类型:</label>
+    <input type="text" class="form-control roomStyle"  name="roomStyle">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail2">房间剩余量:</label>
+    <input type="text" class="form-control roomRest"   name="roomRest">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail2">房间价格:</label>
+    <input type="text" class="form-control roomPrice"  name="roomPrice">
+  </div>
+   <div class="form-group">
+    <label for="exampleInputFile">房间图片:</label>
+    <input type="file" id="exampleInputFile"  name="roomfileimg" class="roomfileimg">
+  </div>
+   <div class="form-group">
+    <label for="exampleInputEmail2">房间介绍:</label>
+    <input type="text" class="form-control roomNews"  name="roomNews">
+  </div>
+  <!--ui-sref='searchRoom'-->
+  <button type="submit" class="btn btn-default" ng-click='addRoom()' ui-sref='searchRoom'>提交</button>
+</form>

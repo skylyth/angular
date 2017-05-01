@@ -1,0 +1,167 @@
+body,html{width: 100%;}
+*{
+	padding: 0;
+	margin: 0;
+}
+	.ng-cloak{display:none}
+	.header{width: 100%}
+	.title{height: 100px;background: url(../images/bg2.jpg);line-height: 100px}
+	.title h1{text-align: center;color: #fff;line-height: 100px;}
+	.nav{width: 100%}
+	.navto{border-top: 1px solid #fff}
+	.navto ul{overflow: hidden;width: 100%;height:50px;background: red}
+	.navto li{float: left;
+	}
+	.navto li a{line-height: 50px;display: block;width: 100%;height: 100%;color: #fff;padding:0 10px;text-align: center;border-radius: 3px}
+	.navto li a:hover{background: #999}
+	.search{background: url(../images/bg6.jpg);display: flex;justify-content:space-between;height: 40px;align-items:center;border: 1px solid #fff;border-radius: 5px;padding: 0 10px}
+	.search input[type=text]{width: 60px}
+	.search-l{display: flex}
+	.sec{height: auto;}
+	.sec-left{position: relative;width: 70%;float: left;border: 1px solid #fff;padding: 20px;min-height: 560px}
+	.sec-left .show img{width: 150px;height: 150px}
+	.sec-left a{display: flex;flex-direction:column;text-align: center;width: 150px}
+	.show li{float: left;margin: 9px}
+	.show li span{margin-top: 10px;color: red;}
+	.aside{overflow: hidden;padding: 10px;border: 1px solid #666;min-height: 560px}
+	.login{height: 130px;width: 100%}
+	.login-login{display: flex;flex-direction:column;border: 1px solid #fff;}
+	.login-login label{display: flex;margin-top: 10px;justify-content: center;}
+	.login-login label button{margin-right: 20px}
+	.do-login{display: none;margin: 10px}
+	.pubNews{height: 100px;width: 100%;background: #fff;margin-top: 10px}
+	.pubNews p{margin: 10px}
+	.pubNews p a{text-decoration: underline;color: red}
+
+	button{
+		padding: 5px;
+		outline: none;
+		background: greenyellow;
+		}
+.page-login{
+	display: none;
+	position: absolute;
+	width: 400px;height: 400px;
+	background: #fff;
+	top: 210px;
+	left: 310px}
+.page-login p{background:#999;padding: 10px}
+.page-login a{display: block;width: 20px;height: 20px;border: 1px solid yellow;color: #fff;text-align: center;}
+.page-login form{width: 300px;display: flex;flex-direction:column;align-items:flex-end;}
+.page-login form div{margin: 8px}
+.sec-left .show-news img{width: 200px;height: 200px}
+.sec-left .show-news p{font: 16px "微软雅黑";color:red;}
+.sec-left .show-news{
+	display: flex;
+	}
+	/*日历*/
+.times{height: 260px}
+	.times span{float: left;width: 33px;height: 30px;text-align: center;line-height: 30px;
+            }
+        #btn{display: flex;justify-content: space-between;align-items: center}
+        #btn p{width: 30px;height: 30px;background:#999;text-align: center;cursor: pointer;
+            border-radius: 50%}}
+
+/*注册*/
+
+#showSmall h1{
+	width: 300px!important;
+	height: 100px!important;
+	line-height: 100px!important;
+	text-align: center!important;
+	margin: 10px auto!important;
+	color: #FFF!important;
+	background: #ccc!important;
+}
+.ng-cloak{display: none;}
+#showSmall,#bigShow{
+	display: none;
+}
+
+/*确定叮当*/
+.register{
+	padding-top: 20px;
+	margin:auto auto;
+	/*margin-left: 115px;*/
+	margin-right: 100px;
+	width: 640px!important;
+}
+.register div{display: flex!important;justify-content: flex-end;margin-top: 15px;padding-right: 92px;}
+.register  button{margin-left: 50px;margin-top: 30px;}
+.register input{height: 30px;width: 200px;}
+#orderss{
+	position: absolute;
+	top: 0;
+	background: url(../images/bg10.jpg);
+}
+#welcome{
+	display: none;
+	width: 300px;
+	height: 75px;
+	line-height: 75px;
+	text-align: center;
+	}
+	#btnss{
+		margin-left: 100px;
+		padding-bottom: 145px;
+	}
+	
+#viewshow{
+	background: url(../images/bg10.jpg);
+}
+
+#room1{
+	width: 300px;
+	}
+	
+.aside{
+	background: url(../images/bg6.jpg);
+}
+
+#imgnews{
+	/*width: 200px;*/
+	position: relative;
+	margin-top: 58px;
+	overflow: hidden;
+	/*height: 174px;*/
+}
+#imgnews img{
+	border-radius: 5px;
+	width: 175px;
+	/*float: left;*/
+}
+#imgnews p{
+	z-index: 999;
+	position: absolute;
+}
+#btnleft{
+	width: 20px;
+	height: 50px;
+	background: greenyellow;
+	opacity: 0.5;
+	top: 66%;	
+	text-align: center;
+	font: bold 20px "微软雅黑";
+	margin-top: -25px;
+	line-height: 50px;
+	left: 0;
+	cursor: pointer;
+}
+#btnright{
+	top: 66%;
+	right: 0;
+	width: 20px;
+	height: 50px;
+	background: greenyellow;
+	opacity: 0.5;	
+	text-align: center;
+	font: bold 20px "微软雅黑";
+	margin-top: -25px;
+	line-height: 50px;
+	cursor: pointer;
+}
+#images1{
+	position: relative;
+	width: 1249px;	
+	height: 117px;
+}

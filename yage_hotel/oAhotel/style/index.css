@@ -1,0 +1,335 @@
+@font-face {
+  font-family: 'iconfont';
+  src: url('../iconfont/iconfont.eot');
+  src: url('../iconfont/iconfont.eot?#iefix') format('embedded-opentype'),
+  url('../iconfont/iconfont.woff') format('woff'),
+  url('../iconfont/iconfont.ttf') format('truetype'),
+  url('../iconfont/iconfont.svg#iconfont') format('svg');
+}
+.iconfont{
+  font-family:"iconfont" !important;
+  font-size:16px;font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+table{border-radius: 5px;}
+.ng-cloak{display: none;}
+.header{
+	display: flex;
+	justify-content: space-between;
+	background: url(../images/bgb.jpg);
+	color: #fff;
+}
+.header h1{
+	line-height: 78px;
+}
+.header i{
+	width: 27px;
+	height: 27px;
+	border-radius: 50%;
+	line-height: 27px;
+	background: #333333;
+	text-align: center;
+}
+h1{margin: 0!important;}
+.header ul{
+	height: 69px;
+}
+.header ul li{
+	display: flex;
+	align-items: center;
+	float: left;
+}
+.changeMima{
+	display: none;
+	border-radius: 4px;
+	color:#000 ;
+	position: absolute;
+	left: 40%;
+	top: 60px;
+	height: 190px;
+	width: 215px;
+	padding: 10px;
+	z-index: 999;
+	border: 1px solid #ccc;
+	background: #fff;
+}
+.changeMima input{height: 30px;margin-bottom: 10px;}
+#personal{
+	display: none;
+	position: absolute;
+	top: 42px;
+	right: 300px;
+	width: 100px;
+	height: 100px;
+	z-index: 9999;
+}
+.header ul li a{
+	padding: 0 20px;
+	font: 16px "微软雅黑";
+	display: block;
+	line-height: 69px;
+	color: #fff;
+}
+.main-left{
+	height: 600px;
+	min-height: 600px;
+	background: #E1E1E1;
+	padding: 0!important;
+}
+.main-center{
+	min-height: 600px;
+	background: url(../images/bg10.jpg);
+}
+/*右侧样式代码*/
+.main-right{
+	min-height: 600px!important;
+	background: url(../images/bg8.jpg);
+}
+.singleRoom,.doubleRoom,.normalRoom,.grandRoom,.loversRoom{
+	overflow: hidden;
+}
+.singleRoom ul li{
+	margin: 0 5px;
+	float: left;
+}
+.doubleRoom ul li{
+	margin: 0 5px;
+	float: left;
+}
+.normalRoom ul li{
+	margin: 0 5px;
+	float: left;
+}
+.grandRoom ul li{
+	margin: 0 5px;
+	float: left;
+}
+.loversRoom ul li{
+	margin: 0 5px;
+	float: left;
+}
+/*左侧开始*/
+.name{display: flex;justify-content: space-around;align-items: center;background: #E1E1E1;height: 85px;width: 100%;border-bottom: 1px solid #fff;}
+.name img{width: 70px;height: 70px;border: 2px solid #ccc;}
+#name{
+	color: orangered;
+	font:bold 16px "微软雅黑";
+}
+.list li{
+	width: 100%;
+	height: 82px;
+	background: #fff;
+	border-bottom: 1px solid #ccc;
+}
+.list li a{
+	text-decoration: none;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	width: 100%;
+	height: 100%;
+}
+.list li a:hover{
+	background: #E1E1E1;
+}
+/*中间开始*/
+.list-item{
+	border-radius: 5px;
+	margin-top: 5px;
+	width: 100%;
+	height: 95px;
+	box-shadow: 0 1px 1px rgba(0,0,0,0.08) inset, 0 1px 1px #fafafa;
+	background: url(../images/back.gif);
+	
+}
+
+.list-item ul li{
+	float: left;
+}
+.list-item ul li a{
+	color: #fff;
+	display: flex;
+	text-decoration: none;
+	margin: 5px 20px;
+	padding: 8px 20px;
+	border-radius: 3px;
+	background: #C43C35;
+}
+.list-item ul li a:hover{background: #ccc;}
+.list-item h4{margin: 0!important;}
+.list-item h4 a{
+	color: #FFF;
+	background: deepskyblue;
+	text-decoration: none;
+	display: block;
+	float: right;
+	padding: 5px 10px;
+	line-height: 48px;
+	margin-top: 10px;
+	border-radius: 5px;
+	margin-right: 100px;
+}
+.list-item h4 a:hover{
+	background: cornflowerblue;
+	color: orange;
+}
+.main-content{
+	margin: 10px 0;
+	width: 100%;
+	min-height: 400px;
+	/*background: greenyellow;*/
+}
+.footer{
+	width: 100%;
+	height: 48px;
+	background: url(../images/bg6.jpg);
+}
+.footer h3{
+	/*line-height: 48px;*/
+	text-align: center;
+	font: bold 16px/48px "新宋体";
+}
+/*查看员工信息*/
+
+#searchAccount a{margin-left: 10px;position: relative;}
+#searchAccount td{position: relative;}
+#searchAccount img{width: 50px;height: 30px;position: absolute;left: 30px;top:2px;}
+#searchAccount img:hover{
+	left: -10px;
+	top:-10px;
+	width: 100px;
+	height: 80px;
+	z-index: 999;
+}
+.opage{margin: 0 0 0 300px!important;}
+
+#updateAccount{
+	display: none;
+	position: absolute;
+	left: 15px;
+	top: 140px;
+	width: 870px;
+	height: 360px;
+	background: rgba(254,254,254,.8);
+}
+.search-ele{
+	display: flex;
+	align-items: center;
+	width: 285px;
+  margin: 10px auto;
+}
+.search-ele input{height: 34px;margin-top: 11px;}
+/*增加账户*/
+
+.register{
+	padding-top: 20px;
+	margin:auto auto;
+	margin-left: 115px;
+	width: 350px!important;
+}
+.register div{display: flex!important;justify-content: flex-end;margin-top: 15px;}
+.register  button{margin-left: 200px;margin-top: 30px;}
+.register input{height: 30px;width: 200px;}
+
+
+/*商城设置*/
+
+.sysDo input{height: 30px;margin: 0!important;margin-right: 50px;vertical-align:middle;min-width: 20px;}
+.sysDo div{margin: 0;}
+
+
+/*客房信息设置*/
+.roomChange{
+	display: none;
+}
+.roomChange input{
+	width: 80px;
+	height:30px ;
+}
+
+/*客户信息设置*/
+
+.tHeight{
+	margin-bottom: 20px;
+	height: 222px!important;
+}
+#updateCustomer{
+	display: none;
+	border-radius: 10px;
+	   opacity: .9;
+    position: absolute;
+    top: 135px;
+    background: #fff;
+    padding-right: 55px;
+    left: 158px;
+
+}
+#updateCustomer button{
+	margin: 20px 0 20px 84px;
+	/*margin-left: 155px;
+	margin-bottom: 10px;*/
+}
+#importNews {
+	display: none;
+	border-radius: 10px;
+	   opacity: .9;
+    position: absolute;
+    top: 135px;
+    background: #fff;
+    padding-right: 55px;
+    left: 158px;
+}
+#importNews button{
+		margin: 20px 0 20px 38px;
+}
+/*订单信息*/
+
+#updateOrder{
+	display: none;
+	border-radius: 10px;
+	   opacity: .9;
+    position: absolute;
+    top: 135px;
+    background: #fff;
+    padding-right: 55px;
+    left: 158px;
+
+}
+#updateOrder button{
+	margin: 20px 0 20px 84px;
+	/*margin-left: 155px;
+	margin-bottom: 10px;*/
+}
+
+#writeliveOrder{
+		display: none;
+		border-radius: 10px;
+	   opacity: .9;
+    position: absolute;
+    top: 135px;
+    background: #fff;
+    padding-right: 55px;
+    left: 158px;
+}
+#writeliveOrder button{
+	margin: 20px 0 20px 84px;
+}
+/*客户入住信息*/
+
+#updateLive{
+	display: none;
+	border-radius: 10px;
+	   opacity: .9;
+    position: absolute;
+    top: 135px;
+    background: #fff;
+    padding-right: 55px;
+    left: 158px;
+}
+#updateLive button{
+	margin: 20px 0 20px 84px;
+	/*margin-left: 155px;
+	margin-bottom: 10px;*/
+}
